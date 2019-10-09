@@ -10,5 +10,5 @@ public class Conexiones {
     static final String PATH ="http://antonymail62.000webhostapp.com/";
     static final String VALIDAR_USUARIO ="validar_usuario_cifrado.php";
     static final String ULTIMAS_LOCALIZACIONES ="obtener_localizaciones.php";
-    static final String OBTENER_CONTACTOS ="obtener_contactos.php";
+    static final String OBTENER_USUARIOS ="obtener_usuarios.php";
 }

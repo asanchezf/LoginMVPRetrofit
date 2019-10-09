@@ -46,7 +46,14 @@ public class MainActivity extends AppCompatActivity implements MvpMainView {
     public void usuarioValido(int mensaje,String texto) {
         if(mensaje==1){
             Toast.makeText(this, "Respuesta correcta "+texto, Toast.LENGTH_LONG).show();
-            startActivity(new Intent(MainActivity.this,MapsActivity.class));
+            //startActivity(new Intent(MainActivity.this,MapsActivity.class));
+
+
+
+            //AHORA TRAEMOS LA LISTA DE TODOS LOS USUARIOS PARA DESPUES MOSTRARLOS EN LA RECYCLERVIEW
+            mMvpMainPresenter.traeUsuarios();
+
+
             startActivity(new Intent(MainActivity.this,Activity_Usuarios.class));
 
         }else if(mensaje==2){

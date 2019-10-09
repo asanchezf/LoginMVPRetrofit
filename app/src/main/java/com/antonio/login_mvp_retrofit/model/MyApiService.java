@@ -4,6 +4,7 @@ import com.antonio.login_mvp_retrofit.model.io.LoginResponse;
 import com.antonio.login_mvp_retrofit.model.io.LoginResponseUsuario;
 import com.antonio.login_mvp_retrofit.model.io.UltimasLocalizaciones;
 import com.antonio.login_mvp_retrofit.model.modelos.Usuario;
+import com.antonio.login_mvp_retrofit.model.modelos.Wraper;
 
 import retrofit2.Call;
 import retrofit2.http.Field;
@@ -42,5 +43,9 @@ public interface MyApiService {
     @GET(Conexiones.ULTIMAS_LOCALIZACIONES)
     Call<UltimasLocalizaciones> getUltimasLocalizaciones();
 
+   /* @GET(Conexiones.OBTENER_USUARIOS)
+        Call<List<Alumno>> getAlumnos();*/
 
+    @GET(Conexiones.OBTENER_USUARIOS)
+    Call<Wraper> getAlumnos();
 }

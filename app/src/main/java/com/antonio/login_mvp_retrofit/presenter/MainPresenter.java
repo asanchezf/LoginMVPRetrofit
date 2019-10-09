@@ -5,7 +5,10 @@ import android.util.Log;
 
 import com.antonio.login_mvp_retrofit.model.ApiAdapter;
 import com.antonio.login_mvp_retrofit.model.io.LoginResponseUsuario;
+import com.antonio.login_mvp_retrofit.model.modelos.Alumno;
 import com.antonio.login_mvp_retrofit.view.MvpMainView;
+
+import java.util.ArrayList;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -16,6 +19,7 @@ public class MainPresenter implements MvpMainPresenter, Callback<LoginResponseUs
     //El Presenter hará de puente entre el View y el Modelo...
     //Se crea una variable miembro perteneciente a la interface View
     private MvpMainView mMvpMainView;
+    private ArrayList<Alumno> miArrayList;
 
     public MainPresenter(MvpMainView mvpMainView) {
         mMvpMainView = mvpMainView;
@@ -34,6 +38,8 @@ public class MainPresenter implements MvpMainPresenter, Callback<LoginResponseUs
 
     @Override
     public void onResponse(Call<LoginResponseUsuario> call, Response<LoginResponseUsuario> response) {
+
+
         if(response.isSuccessful()){
            // Log.v("Respuesta login",edtNombre.getText().toString().trim() + " " + edtPassword.getText().toString().trim());
 
@@ -42,6 +48,13 @@ public class MainPresenter implements MvpMainPresenter, Callback<LoginResponseUs
 
             if(response.body().getEstado()==1) {//El usuario se ha logado  y la respuesta ha sido 1 por lo tanto el usuario existe en la BB.DD.
                 usuarioValido(1,response.body().getUsuario().getUsername());
+
+
+                /*for(LoginResponseUsuario res : response.body()) {
+                    Log.e("Usuario: ",res.getId()+" "+res.getNickName());
+                }*/
+
+
                 //String texto = response.body().getUsuario().getUsername();
                 //mMvpMainView.usuarioValido(1, texto);
             }
@@ -77,6 +90,12 @@ public class MainPresenter implements MvpMainPresenter, Callback<LoginResponseUs
     @Override
     public void error() {
         mMvpMainView.error();
+    }
+
+    @Override
+    public void traeUsuarios() {
+
+
     }
 
 

@@ -8,6 +8,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.antonio.login_mvp_retrofit.R;
+import com.antonio.login_mvp_retrofit.model.modelos.Alumno;
 import com.antonio.login_mvp_retrofit.model.modelos.Usuario;
 
 import java.util.ArrayList;
@@ -15,7 +16,7 @@ import java.util.ArrayList;
 public class AdaptadorRecyclerView extends RecyclerView.Adapter<AdaptadorRecyclerView.UsuariosViewHolder>  {
 
 
-    private ArrayList<Usuario> items;//ArrayList de contactos sin filtrar
+    private ArrayList<Alumno> items;//ArrayList de contactos sin filtrar
 
     private OnItemClickListener escucha;
     private final Context contexto;
@@ -33,7 +34,7 @@ public class AdaptadorRecyclerView extends RecyclerView.Adapter<AdaptadorRecycle
 
 
     //CONSTRUCTOR DEL ADAPTADOR
-    public AdaptadorRecyclerView(ArrayList<Usuario> datos, OnItemClickListener escucha, Context contexto) {
+    public AdaptadorRecyclerView(ArrayList<Alumno> datos, OnItemClickListener escucha, Context contexto) {
 
         items = datos;//items==userList
         this.escucha = escucha;

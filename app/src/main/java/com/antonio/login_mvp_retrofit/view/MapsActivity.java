@@ -64,7 +64,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         for(Alumno alumno:marcadores){
 
             //System.out.println(alumno.getUsername());
-            milocalizacion = new LatLng( Double.parseDouble(alumno.getLatitud()),Double.parseDouble(alumno.getLongitud()) );
+           /* milocalizacion = new LatLng( Double.parseDouble(alumno.getLatitud()),Double.parseDouble(alumno.getLongitud()) );*/
 
             MarkerOptions markerOptions =
                     new MarkerOptions()

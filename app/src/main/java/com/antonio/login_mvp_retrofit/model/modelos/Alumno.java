@@ -5,126 +5,136 @@ import com.google.gson.annotations.SerializedName;
 
 public class Alumno {
 
-@SerializedName("Id")
-@Expose
-private String id;
-@SerializedName("Poblacion")
-@Expose
-private String poblacion;
-@SerializedName("Calle")
-@Expose
-private String calle;
-@SerializedName("Numero")
-@Expose
-private String numero;
-@SerializedName("Longitud")
-@Expose
-private String longitud;
-@SerializedName("Latitud")
-@Expose
-private String latitud;
-@SerializedName("Velocidad")
-@Expose
-private String velocidad;
-@SerializedName("FechaHora")
-@Expose
-private String fechaHora;
-@SerializedName("Telefono")
-@Expose
-private String telefono;
-@SerializedName("Email")
-@Expose
-private String email;
-@SerializedName("Username")
-@Expose
-private String username;
+    @SerializedName("Id")
+    @Expose
+    private String id;
+    @SerializedName("Username")
+    @Expose
+    private String username;
+    @SerializedName("Password")
+    @Expose
+    private String password;
+    @SerializedName("Email")
+    @Expose
+    private String email;
+    @SerializedName("ID_Android")
+    @Expose
+    private String iDAndroid;
+    @SerializedName("Telefono")
+    @Expose
+    private String telefono;
+    @SerializedName("FechaCreacion")
+    @Expose
+    private String fechaCreacion;
+    @SerializedName("Observaciones")
+    @Expose
+    private Object observaciones;
+    @SerializedName("FechaModificacion")
+    @Expose
+    private Object fechaModificacion;
 
-public String getId() {
-return id;
-}
+    /**
+     * No args constructor for use in serialization
+     *
+     */
+    public Alumno() {
+    }
 
-public void setId(String id) {
-this.id = id;
-}
+    /**
+     *
+     * @param id
+     * @param username
+     * @param email
+     * @param telefono
+     * @param fechaCreacion
+     * @param fechaModificacion
+     * @param observaciones
+     * @param iDAndroid
+     * @param password
+     */
+    public Alumno(String id, String username, String password, String email, String iDAndroid, String telefono, String fechaCreacion, Object observaciones, Object fechaModificacion) {
+        super();
+        this.id = id;
+        this.username = username;
+        this.password = password;
+        this.email = email;
+        this.iDAndroid = iDAndroid;
+        this.telefono = telefono;
+        this.fechaCreacion = fechaCreacion;
+        this.observaciones = observaciones;
+        this.fechaModificacion = fechaModificacion;
+    }
 
-public String getPoblacion() {
-return poblacion;
-}
+    public String getId() {
+        return id;
+    }
 
-public void setPoblacion(String poblacion) {
-this.poblacion = poblacion;
-}
+    public void setId(String id) {
+        this.id = id;
+    }
 
-public String getCalle() {
-return calle;
-}
+    public String getUsername() {
+        return username;
+    }
 
-public void setCalle(String calle) {
-this.calle = calle;
-}
+    public void setUsername(String username) {
+        this.username = username;
+    }
 
-public String getNumero() {
-return numero;
-}
+    public String getPassword() {
+        return password;
+    }
 
-public void setNumero(String numero) {
-this.numero = numero;
-}
+    public void setPassword(String password) {
+        this.password = password;
+    }
 
-public String getLongitud() {
-return longitud;
-}
+    public String getEmail() {
+        return email;
+    }
 
-public void setLongitud(String longitud) {
-this.longitud = longitud;
-}
+    public void setEmail(String email) {
+        this.email = email;
+    }
 
-public String getLatitud() {
-return latitud;
-}
+    public String getIDAndroid() {
+        return iDAndroid;
+    }
 
-public void setLatitud(String latitud) {
-this.latitud = latitud;
-}
+    public void setIDAndroid(String iDAndroid) {
+        this.iDAndroid = iDAndroid;
+    }
 
-public String getVelocidad() {
-return velocidad;
-}
+    public String getTelefono() {
+        return telefono;
+    }
 
-public void setVelocidad(String velocidad) {
-this.velocidad = velocidad;
-}
+    public void setTelefono(String telefono) {
+        this.telefono = telefono;
+    }
 
-public String getFechaHora() {
-return fechaHora;
-}
+    public String getFechaCreacion() {
+        return fechaCreacion;
+    }
 
-public void setFechaHora(String fechaHora) {
-this.fechaHora = fechaHora;
-}
+    public void setFechaCreacion(String fechaCreacion) {
+        this.fechaCreacion = fechaCreacion;
+    }
 
-public String getTelefono() {
-return telefono;
-}
+    public Object getObservaciones() {
+        return observaciones;
+    }
 
-public void setTelefono(String telefono) {
-this.telefono = telefono;
-}
+    public void setObservaciones(Object observaciones) {
+        this.observaciones = observaciones;
+    }
 
-public String getEmail() {
-return email;
-}
+    public Object getFechaModificacion() {
+        return fechaModificacion;
+    }
 
-public void setEmail(String email) {
-this.email = email;
-}
-
-public String getUsername() {
-return username;
-}
-
-public void setUsername(String username) {
-this.username = username;
-}
+    public void setFechaModificacion(Object fechaModificacion) {
+        this.fechaModificacion = fechaModificacion;
+    }
 
 }
